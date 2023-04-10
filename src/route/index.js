@@ -314,7 +314,7 @@ router.get('/person', function (req, res) {
                                     'Software Engineer',
                                 },
                                 {
-                                  name: 'Cindy Chen',
+                                  name: 'Cindy Chack',
                                   title: 'UI Designer',
                                 },
                               ],
