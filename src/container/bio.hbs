@@ -1,0 +1,69 @@
+<main>
+    <section>
+        <h1>{{name}} ({{occupation}})</h1>
+        <div>
+            <p>
+                Birthday - {{birthdate}}. {{birthplace}}
+            </p>
+            <p>
+                Deathday - {{deathdate}}. {{deathplace}}
+            </p>
+            <p>
+                Nationality - {{nationality}}
+            </p>
+            <p>
+                Occupation - {{occupation}}. Known for ({{#each known_for}}
+                <em>{{this}},</em>
+                {{/each}})
+            </p>
+            <p>
+                Education:{{#each education}}
+                Institution({{year}}) - {{institution}} , {{degree}}, {{field}}
+                {{/each}}
+            </p>
+        </div>
+        <strong>Publication:</strong>
+        <ul>
+            {{#each notable_publications}}
+            <li>{{title}} ({{year}} - {{publisher}})</li>
+            {{/each}}
+        </ul>
+        <strong>Wife:</strong>
+        <ul>
+            {{#each partners}}
+            <li>
+                {{name}} ({{relationship}} {{years}})
+            </li>
+            {{/each}}
+        </ul>
+        <p>
+            He was influenced by people like:
+            {{#each influences}}
+            <em>{{this}},</em>
+            {{/each}}.
+
+            Influenced people like:
+            {{#each influenced}}
+            <em>{{this}},</em>
+            {{/each}}
+        </p>
+        <p>
+            Some of his quotes: 
+            {{#each quotes}}
+            <q>{{this}}</q>
+            {{/each}}
+        </p>
+        <strong>Major discoveries</strong>:
+        {{#each major_discoveries}}
+        {{title}} ({{year}}) - {{description}}
+        {{/each}}
+
+        <p>
+            {{#with contributions}}
+            <h4>{{title}}:</h4>
+            {{field}}({{year}}) - {{description}}
+            {{/with}}
+        </p>
+    </section>
+
+</main>
