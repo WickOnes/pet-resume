@@ -76,12 +76,15 @@
                     </span>
                     <br>
                     {{/with}}
-                    
+
                     <ul>
-                        {{#each performers}}
+                        {{#if performers}}
                          <strong>
-                        Performers:
-                    </strong>
+                            Performers:
+                        </strong>
+                        {{/if}}
+                        {{#each performers}}
+                       
 
                         <li>
                             Name: {{name}}
@@ -94,12 +97,6 @@
                         <br>
                         {{/each}}
                     </ul>
-
-
-
-
-
-
                     {{#with guide}}
                     <strong> Guide:</strong>
                     <ul>

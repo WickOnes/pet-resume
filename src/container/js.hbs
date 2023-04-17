@@ -1,0 +1,90 @@
+<main class="text-bg-secondary p-3">
+    <section>
+        <h1>
+            <span class="badge bg-secondary">{{name}}</span>
+            {{#with history}}
+            <span class="h5">({{year}} - {{founder}})</span>
+            {{/with}}
+        </h1>
+        <div class="text-bg-secondary p-3">({{description}})</div>
+
+        <ul class="list-group list-group-flush">
+            <h3>Types:</h3>
+            {{#each types}}
+            <li class="list-group-item">{{this}}</li>
+            {{/each}}
+        </ul>
+
+        {{#with syntax}}
+
+
+
+        <ul class="list-group list-group-flush">
+            <h4>Variables:</h4>
+            {{#each variables}}
+            <li class="list-group-item">{{this}}</li>
+            {{/each}}
+        </ul>
+        <ul class="list-group list-group-flush">
+            <h4>functions:</h4>
+            {{#each functions}}
+            <li class="list-group-item">{{this}}</li>
+            {{/each}}
+        </ul>
+        <ul class="list-group list-group-flush">
+            <h4>conditionals:</h4>
+            {{#each conditionals}}
+            <li class="list-group-item">{{this}}</li>
+            {{/each}}
+        </ul>
+
+        <ul class="list-group list-group-flush">
+            <h4>loops:</h4>
+            {{#each loops}}
+            <li class="list-group-item">{{this}}</li>
+            {{/each}}
+        </ul>
+
+        <ul class="list-group list-group-flush">
+            <h4>classes:</h4>
+            {{#each classes}}
+            <li class="list-group-item">{{this}}</li>
+            {{/each}}
+        </ul>
+
+        {{/with}}
+
+        <ul class="list-group list-group-flush">
+            <h4>features:</h4>
+            {{#each features}}
+            <li class="list-group-item">{{this}}</li>
+            {{/each}}
+        </ul>
+
+        <ul class="list-group list-group-flush">
+            <h4>libraries:</h4>
+            {{#each libraries}}
+            <li class="list-group-item">{{this}}</li>
+            {{/each}}
+        </ul>
+
+        <ul class="list-group list-group-flush">
+            <h4>tools:</h4>
+            {{#each tools}}
+            <li class="list-group-item">{{this}}</li>
+            {{/each}}
+        </ul>
+
+        <ul class="list-group list-group-flush">
+        <h4>community:</h4>
+        {{#each community}}
+
+        <li class="list-group-item">{{name}}</li>
+        <li class="list-group-item">{{type}}</li>
+        <br>
+
+        {{/each}}
+        </ul>
+
+    </section>
+</main>
