@@ -1,0 +1,84 @@
+<section>
+    <main>
+      <div class="container">
+
+		<h1 class="text-primary">{{name}}</h1>
+		<p class="text-secondary">{{description}}</p>
+
+		<h2 class="text-info">Features</h2>
+
+		{{#with features}}
+
+			{{#with processor}}
+				<h3 class="text-success">Processor</h3>
+				<p>{{brand}} {{model}} ({{speed}}, {{cores}} cores, {{cache}} cache)</p>
+			{{/with}}
+
+			{{#with memory}}
+				<h3 class="text-danger">Memory</h3>
+				<p>{{size}} {{type}} {{speed}}</p>
+			{{/with}}
+
+			{{#with storage}}
+				<h3 class="text-warning">Storage</h3>
+				<p>{{type}} {{size}}</p>
+			{{/with}}
+
+			{{#with display}}
+				<h3 class="text-info">Display</h3>
+				<p>{{size}} {{resolution}} {{technology}} ({{color_space}} color space, {{brightness}} brightness, {{refresh_rate}} refresh rate)</p>
+			{{/with}}
+
+			{{#with graphics}}
+				<h3 class="text-primary">Graphics</h3>
+				<p>{{brand}} {{model}} ({{memory}})</p>
+			{{/with}}
+
+			{{#with ports}}
+				<h3 class="text-secondary">Ports</h3>
+				<ul class="list-group list-group-flush">
+					{{#each this}}
+						<li class="list-group-item">{{type}} ({{count}})</li>
+					{{/each}}
+				</ul>
+			{{/with}}
+
+			{{#with battery}}
+				<h3 class="text-success">Battery</h3>
+				<p>{{type}} {{capacity}} {{life}}</p>
+			{{/with}}
+
+			{{#with weight}}
+				<h3 class="text-danger">Weight</h3>
+				<p>{{this}}</p>
+			{{/with}}
+
+			{{#with dimensions}}
+				<h3 class="text-warning">Dimensions</h3>
+				<p>{{height}} x {{width}} x {{depth}}</p>
+			{{/with}}
+
+			{{#with operating_system}}
+				<h3 class="text-info">Operating System</h3>
+				<p>{{this}}</p>
+			{{/with}}
+
+			{{#with accessories}}
+				<h3 class="text-primary">Accessories</h3>
+				<ul class="list-group list-group-flush">
+					{{#each this}}
+						<li class="list-group-item">{{name}} (${{price}})</li>
+					{{/each}}
+				</ul>
+			{{/with}}
+
+		{{/with}}
+
+		<h2 class="text-secondary">Price</h2>
+		<p class="text-success">${{price}}</p>
+
+		<h2 class="text-warning">Category</h2>
+		<p class="text-danger">{{category}}</p>
+
+    </main>
+</section>
