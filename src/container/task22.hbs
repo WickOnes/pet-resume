@@ -1,11 +1,8 @@
 <section>
     <main>
-
         <h1 class="text-center">{{page_header.title}}</h1>
         <p class="text-center">{{page_header.description}}</p>
-
         {{#with section}}
-
         {{#with about_us}}
         <div class="card">
             <div class="card-body">
@@ -15,7 +12,6 @@
             </div>
         </div>
         {{/with}}
-
         <br>
         {{#with advantage}}
         <div class="card">
@@ -30,7 +26,6 @@
                     {{/with}}
                 </div>
             </div>
-
             <br>
             {{#with innovation}}
             <div class="card-body">
@@ -40,7 +35,6 @@
                         <h6 class="text-center">{{sub_title}}</h6>
                         <p class="text-center">{{description}}</p>
                         <div class="card-body"><button class="btn btn-outline-warning ">{{button}}</button></div>
-
                     </div>
                 </div>
             </div>
@@ -61,26 +55,24 @@
         </div>
         {{/with}}
         {{/with}}
-
         <br>
         {{#with agreement}}
         <div class="card-body">
             <div class="card">
                 <p class="display-5 ">{{title}}</p>
-
                 <div class="card-body">
                     {{#with info}}
                     <div class="card">
                         <div class="card-body">
                             <h5>{{sub_title}}</h6>
-                            {{#with detail}}
-                            <div class="card">
-                                <div class="card-body">
-                                    <p>{{text}}</p>
-                                    <div class="card-body"><button class="btn btn-success">{{button}}</button></div>
+                                {{#with detail}}
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p>{{text}}</p>
+                                        <div class="card-body"><button class="btn btn-success">{{button}}</button></div>
+                                    </div>
                                 </div>
-                            </div>
-                            {{/with}}
+                                {{/with}}
                         </div>
                     </div>
                     {{/with}}
