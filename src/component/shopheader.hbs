@@ -1,0 +1,28 @@
+<section>
+    <div class="card">
+        <div class="row">
+            <div class="col-6">
+                <a class="btn" href="#">LOGO</a>
+            </div>
+            <div class="col-6">
+
+                {{#with navigation}}
+                <ul class="nav nav-pills">
+                    {{#each links}}
+                    {{#if disabled}}
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="{{href}}">{{text}}</a>
+                    </li>
+                    {{else}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{href}}">{{text}}</a>
+                    </li>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+                {{/with}}
+
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,21 +1,5 @@
 <main>
-    <section>
-        {{#with navigation}}
-        <ul class="nav nav-pills">
-            {{#each links}}
-            {{#if disabled}}
-            <li class="nav-item">
-                <a class="nav-link disabled" href="{{href}}">{{text}}</a>
-            </li>
-            {{else}}
-            <li class="nav-item">
-                <a class="nav-link" href="{{href}}">{{text}}</a>
-            </li>
-            {{/if}}
-            {{/each}}
-        </ul>
-        {{/with}}
-    </section>
+   
 
     <section>
         {{#with newsBlock}}
@@ -69,27 +53,7 @@
                 </ul>
             </div>
 
-            <div class="row">
-                {{#each cards}}
-                <div class="col-4">
-                    <div class="card m-2">
-                        <img src="{{image}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{title}}
-                                {{#if isHot}}
-                                <span class="badge bg-danger">HOT</span>
-                                {{/if}}
-                                {{#if isNew}}
-                                <span class="badge bg-success">NEW</span>
-                                {{/if}}
-                            </h5>
-
-                            <p class="card-text">{{description}}</p>
-                        </div>
-                    </div>
-                </div>
-                {{/each}}
-            </div>
+              {{> shopcard}}
         </div>
         {{/with}}
     </section>
@@ -109,42 +73,6 @@
         {{/with}}
     </section>
 
-    <section>
-        {{#with service}}
-        <div class="card bg-success text-light text-center">
-            <div class="card-body">
-                <h5 class="card-title">{{title}}</h5>
-                <p class="card-text">{{description}}</p>
-                {{#each buttons}}
-                <div class="mb-2"><a href="{{link}}" class="btn btn-primary">{{text}}</a>
-                </div>
-                {{/each}}
-            </div>
-        </div>
-        {{/with}}
-    </section>
+    
 
-    <section>
-       <div class="row">
-           
-           {{#each footer}}
-           <div class="col-2">
-               <ul class="nav nav-pills flex-column">
-                   {{#each this}}
-                   {{#if disabled}}
-                   <li class="nav-item">
-                       <a class="nav-link disabled" href="{{href}}">{{text}}</a>
-                   </li>
-                   {{else}}
-                   <li class="nav-item">
-                       <a class="nav-link" href="{{link}}">{{text}}</a>
-                   </li>
-                   {{/if}}
-                   {{/each}}
-               </ul>
-           </div>
-           
-           {{/each}}
-       </div>
-    </section>
 </main>
