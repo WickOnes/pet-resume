@@ -1,0 +1,23 @@
+ <section>
+        <div class="row">
+
+            {{#each footer}}
+            <div class="col-2">
+                <ul class="nav nav-pills flex-column">
+                    {{#each this}}
+                    {{#if disabled}}
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="{{href}}">{{text}}</a>
+                    </li>
+                    {{else}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{link}}">{{text}}</a>
+                    </li>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+
+            {{/each}}
+        </div>
+    </section>
