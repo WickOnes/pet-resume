@@ -8,21 +8,50 @@
                 {{#each users}}
                 <li class="list-group-item">
                     <h3>{{name}}</h3>
+                    <p>Age: {{age}}</p>
+                    <p>Gender: {{gender}}</p>
                     {{#if friends}}
                     <h4>Friends:</h4>
                     <ul class="list-group">
                         {{#each friends}}
                         <li class="list-group-item">
                             <h5>{{name}}</h5>
+                            <p>Age: {{age}}</p>
+                            <p>Gender: {{gender}}</p>
                             {{#if mutual_friends}}
                             <h6>Mutual Friends:</h6>
                             <ul class="list-group">
                                 {{#each mutual_friends}}
-                                <li class="list-group-item">{{name}}</li>
+                                <li class="list-group-item">{{name}}
+                                    <p>Age: {{age}}</p>
+                                    <p>Gender: {{gender}}</p>
+                                </li>
                                 {{/each}}
                             </ul>
                             {{/if}}
                         </li>
+                         {{#if groups}}
+                    <h4>Groups:</h4>
+                    <ul class="list-group">
+                        {{#each groups}}
+                        <li class="list-group-item">
+                            <h5>{{name}}</h5>
+                            <p>{{description}}</p>
+                            {{#if members}}
+                            <h6>Members:</h6>
+                            <ul class="list-group">
+                                {{#each members}}
+                                <li class="list-group-item">{{name}}
+                                    <p>Age: {{age}}</p>
+                                    <p>Gender: {{gender}}</p>
+                                </li>
+                                {{/each}}
+                            </ul>
+                            {{/if}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{/if}}
                         {{/each}}
                     </ul>
                     {{/if}}
@@ -37,7 +66,10 @@
                             <h6>Members:</h6>
                             <ul class="list-group">
                                 {{#each members}}
-                                <li class="list-group-item">{{name}}</li>
+                                <li class="list-group-item">{{name}}
+                                    <p>Age: {{age}}</p>
+                                    <p>Gender: {{gender}}</p>
+                                </li>
                                 {{/each}}
                             </ul>
                             {{/if}}
