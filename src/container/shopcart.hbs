@@ -1,0 +1,57 @@
+<main>
+    <section>
+        {{#with header}}
+        <h2>{{title}}</h2>
+        {{#with button}}
+        <a class="btn btn-outline-secondary mt-3" href="{{link}}">{{text}}</a>
+        {{/with}}
+        {{/with}}
+        <hr class="mt-5">
+    </section>
+
+    <section>
+        {{#each goodsBlock}}
+        {{> cartGoodsItem}}
+        {{/each}}
+    </section>
+    <hr class="mt-5">
+
+    <section>
+        {{#with total}}
+        <h2>{{title}}</h2>
+        <h2>{{amount}}</h2>
+        <p>{{delivery}}</p>
+
+        {{#each buttons }}
+        {{#if isSuccess}}
+        <div><a href="{{link}}" class="btn btn-success mt-3">{{text}}</a></div>
+        {{else}}
+        <a href="{{link}}" class="btn btn-outline-success mt-3">{{text}}</a>
+        {{/if}}
+        {{/each}}
+        {{/with}}
+    </section>
+    <hr class="mt-5">
+
+    <section>
+        {{#with goodsOtherBlock}}
+        <h2 class="text-center">{{title}}</h2>
+        {{> shopcard}}
+        {{/with}}
+    </section>
+
+    <section>
+        {{#with subscribe}}
+        <div class="card bg-secondary text-light">
+            <div class="card-body">
+                <h5 class="card-title">{{header}}</h5>
+                <p class="card-text">{{description}}</p>
+                {{#each buttons}}
+                <div class="mb-2"><a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        {{/with}}
+    </section>
+</main>
