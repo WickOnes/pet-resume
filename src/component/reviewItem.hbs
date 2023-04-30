@@ -1,0 +1,52 @@
+ <div class="card mt-3">
+            <div class="card-body">
+                <div class="card">
+                    {{#with title}}
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                {{userName}}
+                            </h5>
+                            <p class="card-text">{{caption}}</p>
+                            <p class="card-text">{{date}}</p>
+                        </div>
+                    </div>
+                    {{/with}}
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        {{#with reviewBody}}
+                        <p class="text-card">
+                            {{seller.title}}: {{seller.value}}
+                        </p>
+                        <p class="text-card">
+                            {{rating.title}}: {{rating.value}}
+                        </p>
+                        {{#each text }}
+                        <p class="card-text">{{this}}</p>
+                        {{/each}}
+                        <p class="text-card">
+                            <b>{{advantages.title}}</b>: <br> {{advantages.text}}
+                        </p>
+                        <p class="text-card">
+                            <b>{{disadvantages.title}}</b>: <br> {{disadvantages.text}}
+                        </p>
+                        {{#each images }}
+                        <img src="{{this}}" class="card-img-top me-2" style="height: 100px; width: 100px" alt="...">
+                        {{/each}}
+                    </div>
+                </div>
+                {{#each coments }}
+                <div class="card mt-5 ms-5">
+                    <div class="card-body">
+                        <h5 class="card-title">{{userName}}</h5>
+                        <p class="card-text">{{date}}</p>
+                        <p class="card-text">{{text}}</p>
+                    </div>
+                </div>
+                {{/each}}
+
+                {{/with}}
+
+            </div>
+        </div>
