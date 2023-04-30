@@ -10,11 +10,11 @@
         <date>{{date}}</date>
 
         <h3>Program:</h3>
-        <ul>
+        <ul class="list-group">
 
             {{#each program}}
 
-            <li><strong>Name: </strong>{{name}} ({{type}}) - {{duration}} hours
+            <li class="list-group-item mt-3"><strong>Name: </strong>{{name}} ({{type}}) - {{duration}} hours
 
                 <ul>
                     {{#with details}}
@@ -22,7 +22,7 @@
                     {{#with museum}}
                     <span>
                         <strong>Museum: </strong>{{name}}
-                        <br>
+
                         {{#with location}}
                         <strong>Location:</strong>
                         <span>
@@ -34,21 +34,21 @@
                     <strong>
                         Exhibits:
                     </strong>
-                    <ul>
+                    <ul class="list-group">
                         {{#each exhibits}}
 
-                        <li>
+                        <li class="list-group-item">
                             Name: {{name}}
                         </li>
                         {{#if artist}}
-                        <li>
+                        <li class="list-group-item">
                             Artist: {{artist}}
                         </li>
                         {{/if}}
-                        <li>
+                        <li class="list-group-item">
                             Description: {{description}}
                         </li>
-                        <li>
+                        <li class="list-group-item">
                             {{#if audio_guide}}
                             Audio guide: "Yes"
                             {{else}}
@@ -77,20 +77,20 @@
                     <br>
                     {{/with}}
 
-                    <ul>
+                    <ul class="list-group">
                         {{#if performers}}
-                         <strong>
+                        <strong>
                             Performers:
                         </strong>
                         {{/if}}
                         {{#each performers}}
-                       
 
-                        <li>
+
+                        <li class="list-group-item">
                             Name: {{name}}
                         </li>
 
-                        <li>
+                        <li class="list-group-item">
                             Type: {{type}}
                         </li>
 
@@ -99,16 +99,14 @@
                     </ul>
                     {{#with guide}}
                     <strong> Guide:</strong>
-                    <ul>
-                        <li>Name: {{name}}</li>
-                        <li>Language: {{language}}</li>
-                        <li>Rating: {{rating}}</li>
+                    <ul class="list-group">
+                        <li class="list-group-item">Name: {{name}}</li>
+                        <li class="list-group-item">Language: {{language}}</li>
+                        <li class="list-group-item">Rating: {{rating}}</li>
                     </ul>
                     <br>
                     <br>
                     {{/with}}
-
-
 
                     {{/with}}
                 </ul>

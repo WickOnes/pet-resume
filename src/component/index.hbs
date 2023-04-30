@@ -1,19 +1,19 @@
 <main>
     <section>
         <div class="card">
-            <div class="card-body">
+            <div class="card-body pb-0">
                 <div class="row">
-                    {{#with project}}
+                    {{#with header}}
                     <div class="col-8">
-                        <h4>{{firstName}} {{lastName}}</h4>
+                        <h4>{{name.firstName}} {{name.lastName}}</h4>
                     </div>
                     <div class="col-4">
-                        <h4 class="card-text">{{projectName}}</h4>
+                        <h4 class="card-text">{{name.projectName}}</h4>
                     </div>
                     {{/with}}
                 </div>
             </div>
-           {{> nav}}
+            {{> nav}}
         </div>
     </section>
 </main>

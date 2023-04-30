@@ -4,27 +4,37 @@
 }}
 
 
- <main>
-    <section>
-      {{> title data = summary.title big=true}}
-      <div>
-        <p>
-          {{summary.text}}
-        </p>
+<main>
+  <section>
+    <div class="card">
+      <div class="card-body">
+        {{> title data = summary.title big=true}}
+        <div>
+          <p>
+            {{summary.text}}
+          </p>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    {{#with experience}}
-    <section>
-      {{> title data = title big=false}}
-      <div>
-        <p>
-          {{text}}
-        </p>
+  {{#with experience}}
+  <section>
+    <div class="card">
+      <div class="card-body">
+        <div>
+          {{> title data = title big=false}}
+          <div>
+            <p>
+              {{text}}
+            </p>
+          </div>
+        </div>
       </div>
-    </section>
-    {{/with}}
-  </main>
+    </div>
+  </section>
+  {{/with}}
+</main>
 {{!-- <div>
   <nav>
     <a href='/summary'>Summary</a>

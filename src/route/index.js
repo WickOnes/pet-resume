@@ -10,6 +10,7 @@ var header = {
   name: {
     firstName: 'Nikita',
     lastName: 'Lozovuy',
+    projectName:"Resume Project"
   },
   position: 'Junior Fullstack JS Developer',
   salary: '600$',
@@ -113,7 +114,14 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout:"index",
+    project:{
+      firstName:"Nikita",
+      lastName:"Lozovuy",
+      projectName:"Resume Project"
+    }
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -3735,7 +3743,6 @@ router.get('/shopcatalog', function (req, res) {
 })
 
 // ================================================================
-
 
 // Підключаємо роутер до бек-енду
 module.exports = router

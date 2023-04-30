@@ -1,90 +1,80 @@
 <main>
     <section>
         <h1>WEB</h1>
-
-
-
         {{#with web}}
-
-
         {{#each languages}}
 
-        <ul>
-            <li>
+        <ul class="list-group">
+            <li class="list-group-item">
                 <strong> {{name}}</strong>(<em>{{version}}</em>)
                 <br>
                 <strong>Description:</strong> {{description}}
-                <ul>
+                <ul class="list-group">
                     <br>
                     {{#if elements}}
                     <b>Elements:</b>
                     {{/if}}
                     {{#each elements}}
 
-                    <li><strong>Name:</strong>
+                    <li class="list-group-item"><strong>Name:</strong>
                         "{{name}}"
                         <br>
                         <b>Description:</b> {{description}}
                         <br>
                         <b>Attributes:</b>
-                        <ul>
+                        <ul class="list-group">
                             {{#each attributes}}
-                            <li>
+                            <li class="list-group-item">
                                 <b>Name:</b> "{{name}}"
-                                <br>
-                                <b>Description:</b> {{description}}
+                                
+                                <b class="mt-3">Description:</b> {{description}}
                             </li>
                             {{/each}}
                         </ul>
                     </li>
                     <br>
                     {{/each}}
-
-
 
                     {{#if properties}}
                     <b>Properties:</b>
                     {{/if}}
                     {{#each properties}}
-                    <li>
+                    <li class="list-group-item">
                         <b>Name: </b> "{{name}}"
                         <br>
                         <b>Description:</b> {{description}}
                         <br>
                         <b>Value:</b>
-                        <ul>
+                        <ul class="list-group">
                             {{#each values}}
-                            <li>
+                            <li class="list-group-item">
                                 <b>Value:</b> "{{value}}"
-                                <br>
-                                <b>Description:</b> {{description}}
+                               
+                                <b class="mt-3">Description:</b> {{description}}
                             </li>
                             {{/each}}
                         </ul>
                     </li>
                     <br>
                     {{/each}}
-
-
-
                     {{#if functions}}
                     <b>Functions:</b>
                     {{/if}}
                     {{#each functions}}
-                    <li>
+                    <li class="list-group-item">
                         <b>Name: </b> "{{name}}"
-                        <br>
-                        <b>Description:</b> {{description}}
-                        <br>
+                       
+                        <b class="mt-3">Description:</b> {{description}}
+                       
                         <b>Parameters:</b>
-                        <ul>
+                        <ul class="list-group">
                             {{#each parameters}}
-                            <li>
+                            <li class="list-group-item">
                                 <b>Name:</b> "{{name}}"
-                                <br>
-                                <b>Type:</b>"{{type}}"
-                                <br>
-                                <b>Description:</b> {{description}}
+                               
+                                <b class="mt-3">Type:</b>"{{type}}"
+                              
+                                <b class="mt-3">Description:</b> {{description}}
                             </li>
                             {{/each}}
                         </ul>
@@ -96,14 +86,7 @@
 
             </li>
         </ul>
-
-
-
         {{/each}}
-
-
         {{/with}}
-
-
     </section>
 </main>
