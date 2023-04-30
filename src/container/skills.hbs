@@ -1,29 +1,21 @@
 <main>
   <section>
     {{> title data = main.title big = true}}
-    <ul>
+    <ul class="list-group">
       {{#each skills}}
-
-
-      <li>{{name}}</li>
-
-
+      <li class="list-group-item col-3">{{name}}</li>
       {{/each}}
     </ul>
   </section>
   <section>
     {{> title data = title big = false}}
-    <ol>
+    <ol class="list-group">
       {{#each hobbies}}
-
-
-      <li>{{name}}
+      <li class="list-group-item col-3">{{name}}
         {{#if isMain}}
         (favourite)
         {{/if}}
       </li>
-
-
       {{/each}}
     </ol>
   </section>

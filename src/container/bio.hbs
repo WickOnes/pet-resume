@@ -23,15 +23,15 @@
             </p>
         </div>
         <strong>Publication:</strong>
-        <ul>
+        <ul class="list-group">
             {{#each notable_publications}}
-            <li>{{title}} ({{year}} - {{publisher}})</li>
+            <li class="list-group-item">{{title}} ({{year}} - {{publisher}})</li>
             {{/each}}
         </ul>
         <strong>Wife:</strong>
-        <ul>
+        <ul class="list-group">
             {{#each partners}}
-            <li>
+            <li class="list-group-item">
                 {{name}} ({{relationship}} {{years}})
             </li>
             {{/each}}
@@ -48,7 +48,7 @@
             {{/each}}
         </p>
         <p>
-            Some of his quotes: 
+            Some of his quotes:
             {{#each quotes}}
             <q>{{this}}</q>
             {{/each}}
@@ -60,9 +60,9 @@
 
         <p>
             {{#with contributions}}
-            <h4>{{title}}:</h4>
-            {{field}}({{year}}) - {{description}}
-            {{/with}}
+        <h4>{{title}}:</h4>
+        {{field}}({{year}}) - {{description}}
+        {{/with}}
         </p>
     </section>
 
